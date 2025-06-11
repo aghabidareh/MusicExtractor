@@ -31,4 +31,5 @@ def main():
 
     extract_vocals(input_audio, output_dir)
 
-
+if __name__ == "__main__":
+    main()
