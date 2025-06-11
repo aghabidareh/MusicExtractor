@@ -13,7 +13,7 @@ def extract_vocals(input_audio_path, output_directory):
         input_audio_path,
         output_directory,
         codec='wav',
-        filename_format='{filename}/vocals.{codec}'
+        filename_format='{filename}_vocals.{codec}'
     )
 
     filename = os.path.splitext(os.path.basename(input_audio_path))[0]
