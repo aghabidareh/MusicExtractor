@@ -4,3 +4,21 @@ from spleeter.separator import Separator
 import os
 
 
+def extract_vocals(input_audio_path, output_directory):
+    separator = Separator('spleeter:2stems')
+
+    os.makedirs(output_directory, exist_ok=True)
+
+    separator.separate_to_file(
+        input_audio_path,
+        output_directory,
+        codec='wav',
+        filename_format='{filename}/vocals.{codec}'
+    )
+
+    filename = os.path.splitext(os.path.basename(input_audio_path))[0]
+    output_vocal_path = os.path.join(output_directory, filename, 'vocals.wav')
+
+    print(f"Vocals extracted and saved to: {output_vocal_path}")
+
+
