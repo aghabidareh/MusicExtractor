@@ -21,4 +21,14 @@ def extract_vocals(input_audio_path, output_directory):
 
     print(f"Vocals extracted and saved to: {output_vocal_path}")
 
+def main():
+    input_audio = "music-with-beat.mp3"
+    output_dir = "output_vocals"
+
+    if not os.path.exists(input_audio):
+        print(f"Error: Input file {input_audio} not found.")
+        return
+
+    extract_vocals(input_audio, output_dir)
+
 
