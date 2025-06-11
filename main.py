@@ -17,7 +17,7 @@ def extract_vocals(input_audio_path, output_directory):
     )
 
     filename = os.path.splitext(os.path.basename(input_audio_path))[0]
-    output_vocal_path = os.path.join(output_directory, filename, 'vocals.wav')
+    output_vocal_path = os.path.join(output_directory, f"{filename}_vocals.wav")
 
     print(f"Vocals extracted and saved to: {output_vocal_path}")
 
