@@ -26,4 +26,6 @@ async def extract_vocals(input_audio_path: str, output_directory: str) -> str:
 
     return output_vocal_path
 
-
+@app.get("/")
+async def root():
+    return {"message": "Welcome to Vocal Extraction API!"}
