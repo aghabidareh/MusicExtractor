@@ -6,4 +6,4 @@ import shutil
 import uuid
 from pathlib import Path
 
-
+app = FastAPI(title="Vocal Extraction API", description="API to extract vocals from audio files", version="1.0")
